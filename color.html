@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Color Mixer</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.box{background: rgb(133,108,184);padding:20px;width:50%;margin:auto;}
+	</style>
+	<script type="text/javascript">
+		function color(){
+			var r=document.getElementById('r').value;
+			var g=document.getElementById('g').value;
+			var b=document.getElementById('b').value;
+			var str="rgb("+r+","+g+","+b+")";
+			document.getElementsByTagName('h1')[0].textContent=str;
+			document.getElementsByTagName('p')[0].style.backgroundColor=str;
+			document.getElementsByTagName('h2')[0].style.color=str;
+			document.body.style.backgroundColor=str;
+		}
+
+		
+	</script>
+</head>
+<body>
+	 <main>
+	<p><a href="index.html">&larr; Home</a></p>
+ 	<h2>RGB Color Mixer</h2>
+ 	<div class="card tcenter">
+ 	<p class="box"></p>
+ 	<h1>rgb(133,108,184)</h1>
+ 	<input type="range" id="r" min="0" max="255" value="133" class="w50"oninput="color()">
+ 	<input type="range" id="g" min="0" max="255" value="108" class="w50"oninput="color()">
+ 	<input type="range" id="b" min="0" max="255" value="184" class="w50"oninput="color()">
+ 		
+ 		
+ 		
+ 	</div>
+ </main>
+</body>
+</html>
